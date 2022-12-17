@@ -30,3 +30,11 @@ resource "aws_vpc_endpoint" "ec2message_endpoint" {
   ]
   private_dns_enabled = true
 }
+
+#resource "aws_vpc_endpoint" "s3gateway_endpoint" {
+#  service_name = "com.amazonaws.ap-northeast-1.s3"
+#  vpc_id = aws_vpc.ssm_test.id
+#  vpc_endpoint_type = "Gateway"
+#  route_table_ids = [aws_vpc.ssm_test.main_route_table_id]
+#}
+
